@@ -10,6 +10,6 @@ public class SpringBeanUtilsPropertiesCopier implements PropertiesCopier {
 
     @Override
     public void copyProperties(Object source, Object target) throws Exception {
-        BeanUtils.copyProperties(source, target);
+        org.springframework.beans.BeanUtils.copyProperties(source, target);
     }
 }

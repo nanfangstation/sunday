@@ -1,6 +1,6 @@
 package beanutils;
 
-import org.springframework.cglib.beans.BeanCopier;
+import net.sf.cglib.beans.BeanCopier;
 
 /**
  * @author Lydia
@@ -8,10 +8,10 @@ import org.springframework.cglib.beans.BeanCopier;
  **/
 public class StaticCglibBeanCopierPropertiesCopier implements PropertiesCopier {
 
-    private static BeanCopier copier = BeanCopier.create(BeanUtil.User.class, BeanUtil.UserCopy.class, false);
+    final net.sf.cglib.beans.BeanCopier copier = BeanCopier.create(BeanUtil.User.class, BeanUtil.User.class, false);
 
     @Override
-    public void copyProperties(Object source, Object target) throws Exception {
+    public void copyProperties(Object source, Object target) {
         copier.copy(source, target, null);
     }
 }
