@@ -1,0 +1,4 @@
+/.idea/
+*.class
+*.iml
+/basic/target/classes/META-INF/basic.kotlin_module
